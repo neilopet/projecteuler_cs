@@ -59,17 +59,17 @@ public class Problem7
 
 	public static int GeneratePrimesSieveOfEratosthenes(int n)
 	{
+	    int largestPrime = 0;
 	    int limit = ApproximateNthPrime(n);
 	    BitArray bits = SieveOfEratosthenes(limit);
-	    List<int> primes = new List<int>();
 	    for (int i = 0, found = 0; i < limit && found < n; i++)
 	    {
-	        if (bits[i])
+	        if (bits[i] && i > largestPrime)
 	        {
-	            primes.Add(i);
+				largestPrime = i;
 	            found++;
 	        }
 	    }
-	    return primes[primes.Count - 1];
+	    return largestPrime;
 	}
 }
