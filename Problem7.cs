@@ -14,6 +14,8 @@ public class Problem7
 		Console.WriteLine(GeneratePrimesSieveOfEratosthenes(10001));
 	}
 
+	/* Uses Eratosthenes Sieve - 
+	Credit: http://stackoverflow.com/a/1072205 */
 	public static int ApproximateNthPrime(int nn)
 	{
 	    double n = (double)nn;
