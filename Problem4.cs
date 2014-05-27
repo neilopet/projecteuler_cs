@@ -4,7 +4,6 @@
  * Find the largest palindrome made from the product of two 3-digit numbers.
  */
 using System;
-using System.Collections.Generic;
 
 public class Problem4
 {
