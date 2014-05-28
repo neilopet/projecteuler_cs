@@ -50,11 +50,14 @@ public class Problem8
 						+"84580156166097919133875499200524063689912560717606"
 						+"05886116467109405077541002256983155200055935729725"
 						+"71636269561882670428252483600823257530420752963450";
+		
 		Int64 product = 0, 
 			  largestProduct = 0;
-		int largestOffset = 0;
-		int range = 13;
-		int subval = 0;
+		
+		int largestOffset = 0,
+			range = 13,
+			subval = 0;
+		
 		for(int i = 0, size = (dataset.Length - range); i < size; i++) {
 			
 			if (dataset.Substring(i, range).Contains("0")) {
