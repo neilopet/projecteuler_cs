@@ -7,7 +7,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
-class Problem9
+class Problem10
 {
 	public static void Main ()
 	{
