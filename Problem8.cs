@@ -51,27 +51,25 @@ public class Problem8
 						+"05886116467109405077541002256983155200055935729725"
 						+"71636269561882670428252483600823257530420752963450";
 		
-		Int64 product = 0, 
+		long product = 0, 
 			  largestProduct = 0;
 		
 		int largestOffset = 0,
 			range = 13,
 			subval = 0;
 		
-		for(int i = 0, size = (dataset.Length - range); i < size; i++) {
+		for(int i = 0, size = (dataset.Length - range); i < size; i++) 
+		{
 			
-			if (dataset.Substring(i, range).Contains("0")) {
+			if (dataset.Substring(i, range).Contains("0")) 
+			{
 				i += range - 1;
 				continue;
 			}
 			
 			product = int.Parse(dataset[i].ToString());
 			
-			for( int j = 1; j < range; j++)
-			{
-				subval = int.Parse(dataset[i+j].ToString());
-				product *= subval;
-			}
+			for( int j = 1; j < range; subval = int.Parse(dataset[i+j].ToString()), product *= subval, j++);
 			
 			if (product > largestProduct)
 			{
