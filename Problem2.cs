@@ -10,25 +10,15 @@ public class Problem2
 {
 	public static void Main()
 	{
-		int	runningTotal = 0, 
-			T = 0,
-			sequenceStart = 0,
-			sequenceStep  = 1;
-		
-		while ( true )
-		{
-			T = sequenceStart;
-			sequenceStart += sequenceStep;
-			sequenceStep = T;
-			
-			runningTotal += (sequenceStart % 2 == 0) ? sequenceStart : 0;
-			
-			if (sequenceStart >= 4000000) 
-			{
-				break;
-			}
-		}
-		
-		Console.WriteLine("Running total: {0}", runningTotal);
+		int sum = 0;
+		for( int f = 1, x = fib(f); x < 4000000; f++, x = fib(f), sum = ((x % 2 == 0) ? (sum + x) : sum) );
+		Console.WriteLine(sum);
+	}
+	
+	public static int fib( int cur )
+	{
+		return (cur == 0 || cur == 1 )
+				? cur
+				: fib( cur - 2) + fib(cur - 1);
 	}
 }
