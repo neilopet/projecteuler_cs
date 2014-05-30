@@ -3,7 +3,6 @@
 */
 using System;
 using System.Numerics;
-using System.Collections.Generic;
 					
 public class Problem13
 {
