@@ -1,4 +1,4 @@
 projecteuler_cs
 ===============
 
-C# Solutions
+C# Solutions for Project Euler problems
