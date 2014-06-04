@@ -11,13 +11,13 @@ public class Problem16
 {
 	public static void Main()
 	{
-	 /* Left bit shifting is the same as raising to power of 2 */
 		BigInteger n = new BigInteger(1);
-		n<<=1000;
+	 	/* Left bit shifting is the same as raising to power of 2 */
+		n <<= 1000;
 		String s = n.ToString();
 		int sum = 0;
 		for(int i = 0, j = s.Length; i < j; sum += Int32.Parse(s.Substring(i, 1)), i++)
-		;
+			;
 		Console.WriteLine(sum);
 	}
 	
